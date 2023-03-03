@@ -13,15 +13,20 @@ allCards=()=>{
             <figure class="px-10 pt-10">
               <img src= ${singleDetails.image} alt="Shoes" class="rounded-xl h-56 w-full" />
             </figure>
-            <div class="card-body items-center text-left">
-              <h2 class="card-title font-semibold">Features</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions">
-               
-              </div>
+            <div class="card-body text-left">
+              <h2 class="card-title font-bold">Features</h2>
+              <ol id="features-ol">
+              <li>1. ${singleDetails.features[0]}</li>
+              <li>2. ${singleDetails.features[1]}</li>
+              <li>3. ${singleDetails.features[2]}</li>
+              </ol>
+              <hr class="my-2">
+            // --
             </div>
           </div>
             `;
+           
+           
             mainContainer.appendChild(div);
         });
      
