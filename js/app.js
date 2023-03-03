@@ -21,7 +21,15 @@ allCards=()=>{
               <li>3. ${singleDetails.features[2]}</li>
               </ol>
               <hr class="my-2">
-            // --
+              <div class="card-actions justify-between">
+              <div>
+              <h2 class="font-bold">${singleDetails.name}</h2>
+              <i class="fa-solid fa-calendar-days"></i> ${singleDetails.published_in}
+              </div>
+              <div>
+              <i class="fa-solid fa-arrow-right bg-red-100 p-4 text-red-700 rounded-3xl"></i>
+              </div>
+              </div>
             </div>
           </div>
             `;
