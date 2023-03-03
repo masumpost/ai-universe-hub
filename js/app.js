@@ -1,11 +1,12 @@
 allCards=()=>{
     const url=` https://openapi.programming-hero.com/api/ai/tools`
     fetch(url).then(res=> res.json()).then(data=> singleCards(data));
-
+    spinner(true);
     singleCards=(data)=>{
       data.data.tools.forEach(singleDetails => {
             console.log(singleDetails);
-            
+            let ids = data.data.tools.id;
+            // console.log(id)
             let mainContainer = document.getElementById('main-container');
             let div = document.createElement('div');
             div.innerHTML=`
@@ -22,21 +23,37 @@ allCards=()=>{
               </ol>
               <hr class="my-2">
               <div class="card-actions justify-between">
-              <div>
+              <div class="gap-2">
               <h2 class="font-bold">${singleDetails.name}</h2>
               <i class="fa-solid fa-calendar-days"></i> ${singleDetails.published_in}
               </div>
-              <div>
-              <i class="fa-solid fa-arrow-right bg-red-100 p-4 text-red-700 rounded-3xl"></i>
+              <div class="items-center">
+
+
+              <button onclick="${singleCardId(ids)}"><i class="fa-solid fa-arrow-right bg-red-100 p-4 text-red-700 rounded-full modal-middle" ></i></button>
               </div>
               </div>
             </div>
           </div>
             `;
-           
-           
+          
+          
             mainContainer.appendChild(div);
+
+            spinner(false)
         });
      
     }
+
+
+}
+
+let spinner = isLoading =>{
+  let loader = document.getElementById('loader')
+if(isLoading){
+  loader.classList.remove('hidden')
+}
+else{
+  loader.classList.add('hidden')
+}
 }
