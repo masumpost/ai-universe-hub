@@ -37,4 +37,10 @@ showModalDetails = (data) =>{
     lis2.innerText = fullData.integrations[1] ? fullData.integrations[1] : 'no data fond';
     let lis3 = document.getElementById('lis3');
     lis3.innerText = fullData.integrations[2] ? fullData.integrations[2] : 'no data fond';
+
+    // modal img question 
+
+    let imgH5 = document.getElementById('imgH5');
+    imgH5.innerText = fullData.input_output_examples[0].input ? fullData.input_output_examples[0].input : 'Can you give any example?';
+    
 }
