@@ -4,6 +4,10 @@ let modalButton = (id) =>{
     .then(data => showModalDetails(data));
 }
 showModalDetails = (data) =>{
-    let modalContainer = document.getElementById('aiCardModal');
-    
+    let fullData = data.data
+    console.log(fullData);
+    let cardDetail = document.getElementById('Mdtl');
+    cardDetail.innerText = fullData.description;
+    let image = document.getElementById('divImage');
+    image.src=fullData.image_link[0];
 }

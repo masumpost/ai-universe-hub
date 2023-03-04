@@ -36,15 +36,23 @@
       <!-- modal section start -->
       <section>
 <!-- Modal -->
-<div class="modal modal-lg" id="aiCardModal" tabindex="-1" aria-labelledby="aiCardModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<div class="modal " id="aiCardModal" tabindex="-1" aria-labelledby="aiCardModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header position-relative">
         
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close position-absolute top-0 start-100 translate-middle bg-danger p-2 rounded-circle light"  data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div id="aiCardModal" class="modal-body">
-
+      <div id="cardModalBody" class="modal-body d-flex p-2 gap-2">
+        <div class="w-50 bg-warning-subtle">
+          <h5 id="Mdtl"></h5>
+          <div id="price" class="d-flex">
+            
+          </div>
+        </div>
+        <div class="w-50">
+          <img class="img-fluid" id="divImage" src="" alt="">
+        </div>
       </div>
       
     </div>
@@ -53,6 +61,7 @@
 </div>
       </section>
       <!-- modal section ends -->
+
     </main>
     <footer>
 

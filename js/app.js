@@ -15,7 +15,7 @@ let div = document.createElement('div');
 div.innerHTML=`
 <div class="col p-2">
 <div class="card">
-  <img style="height:300px;" src=${sData.image} class="card-img-top p-2 w-100 rounded" alt="...">
+  <img style="height:280px;" src=${sData.image} class="card-img-top p-2 w-100 rounded" alt="...">
   <h3 class="p-2">Features</h3>
 
   <ol>
@@ -55,3 +55,4 @@ else{
 }
 }
 // spinner section end
+
