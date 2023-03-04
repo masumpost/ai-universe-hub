@@ -46,5 +46,10 @@ showModalDetails = (data) =>{
     // modal img answers 
 
     let imgP = document.getElementById('imgP');
-    imgP.innerText = fullData.input_output_examples[0].output ? fullData.input_output_examples[0].output : 'No! Not Yet! Take a break!!!'
+    imgP.innerText = fullData.input_output_examples[0].output ? fullData.input_output_examples[0].output : 'No! Not Yet! Take a break!!!';
+
+    // accuracy 
+
+    let accu = document.getElementById('accu');
+    accu.innerText = fullData.accuracy.score;
 }
