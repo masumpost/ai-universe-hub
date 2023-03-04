@@ -8,7 +8,6 @@ let firstApi = ()=> {
 singleCardDetails =(data)=>{
     let singleData = data.data.tools
     singleData.forEach(sData => {
-        console.log(sData)
         let id = sData.id;
 let cardSection = document.getElementById('cardSection');
 let div = document.createElement('div');
@@ -37,9 +36,9 @@ div.innerHTML=`
 </div>
 </div>
 `;
-
 cardSection.appendChild(div)
     });
+    
 spinner(false);
 }
 

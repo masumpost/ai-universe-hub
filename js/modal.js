@@ -1,7 +1,7 @@
-let modalButton = (id) =>{
-    fetch(`https://openapi.programming-hero.com/api/ai/tool/${id}`)
-    .then(res => res.json())
-    .then(data => showModalDetails(data));
+let modalButton = async(id) =>{
+    let res = await fetch(`https://openapi.programming-hero.com/api/ai/tool/${id}`)
+    let data = await res.json();
+      showModalDetails(data);
 }
 showModalDetails = (data) =>{
     let fullData = data.data
