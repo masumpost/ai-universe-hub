@@ -10,4 +10,11 @@ showModalDetails = (data) =>{
     cardDetail.innerText = fullData.description;
     let image = document.getElementById('divImage');
     image.src=fullData.image_link[0];
+
+    let price1 = document.getElementById('price1');
+    price1.innerText = fullData.pricing[0].price;
+    let price2 = document.getElementById('price2');
+    price2.innerText = fullData.pricing[1].price;
+    let price3 = document.getElementById('price3');
+    price3.innerText = fullData.pricing[2].price ? fullData.pricing[2].price : 'free of cost';
 }
