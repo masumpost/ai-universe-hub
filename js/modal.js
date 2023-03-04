@@ -42,5 +42,9 @@ showModalDetails = (data) =>{
 
     let imgH5 = document.getElementById('imgH5');
     imgH5.innerText = fullData.input_output_examples[0].input ? fullData.input_output_examples[0].input : 'Can you give any example?';
-    
+
+    // modal img answers 
+
+    let imgP = document.getElementById('imgP');
+    imgP.innerText = fullData.input_output_examples[0].output ? fullData.input_output_examples[0].output : 'No! Not Yet! Take a break!!!'
 }
