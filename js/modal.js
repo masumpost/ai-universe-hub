@@ -11,7 +11,7 @@ showModalDetails = (data) =>{
     let image = document.getElementById('divImage');
     image.src=fullData.image_link[0];
 
-    // modal middel box
+    // modal middle box
 
     let price1 = document.getElementById('price1');
     price1.innerText = fullData.pricing[0].price !=0 ? fullData.pricing[0].price : 'free of cost';
@@ -28,5 +28,13 @@ showModalDetails = (data) =>{
     li2.innerText = fullData.features[2].feature_name;
     let li3 = document.getElementById('li3');
     li3.innerText = fullData.features[3].feature_name;
- 
+
+    // integration list
+
+    let lis1 = document.getElementById('lis1');
+    lis1.innerText = fullData.integrations[0] ? fullData.integrations[0] : 'no data fond';
+    let lis2 = document.getElementById('lis2');
+    lis2.innerText = fullData.integrations[1] ? fullData.integrations[1] : 'no data fond';
+    let lis3 = document.getElementById('lis3');
+    lis3.innerText = fullData.integrations[2] ? fullData.integrations[2] : 'no data fond';
 }
